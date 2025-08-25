@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS users (id VARCHAR(36) PRIMARY KEY, name TEXT, email TEXT UNIQUE, created_at DATETIME, updated_at DATETIME);

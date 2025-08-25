@@ -1,0 +1,31 @@
+* Basic Web App in Prolog
+
+This project goal was just to learn more about [[https://en.wikipedia.org/wiki/Prolog][Prolog]] and the [[https://en.wikipedia.org/wiki/Logic_programming][Logic Paradigm]].
+
+All migration files are stored on [[https://github.com/bronen/crud-prolog/tree/master/migration][migration/]], you can run like this:
+
+#+BEGIN_SRC sh
+
+touch db.sqlite
+swipl -f server.pl -q -g "migrate('db.sqlite', 'migration/')." -t halt
+
+#+END_SRC
+
+#+RESULTS:
+
+Also, you can run the server using this command:
+
+#+BEGIN_SRC sh
+
+touch db.sqlite
+swipl -f server.pl -q -g "start(8000, 'db.sqlite')." -t halt
+
+#+END_SRC
+
+If you need to install the [[https://www.swi-prolog.org/pack/list?p=swiplite][Swiplite dependencies]]:
+
+#+BEGIN_SRC sh
+
+swipl pack install swiplite
+
+#+END_SRC
